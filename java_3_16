@@ -1,0 +1,68 @@
+package java3;
+
+import java.util.Scanner;
+public class RSP {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String str[]= {"가위","바위","보"};
+        
+        System.out.println("컴퓨터와 가위 바위 보 게임을 합니다.");
+        System.out.print("가위 바위 보!>> ");
+        String a=sc.next();
+        while(!a.equals("그만")) {
+            int n=(int)(Math.random()*3);
+            System.out.print("사용자 = "+ a +" , 컴퓨터 = "+str[n]+" , ");
+            if(n==0){
+                switch(a) {
+                case "가위":
+                    System.out.println("비겼습니다.");
+                    break;
+                case "바위":
+                    System.out.println("사용자가 이겼습니다.");
+                    break;
+                case "보":
+                    System.out.println("컴퓨터가 이겼습니다.");
+                    break;
+                default:
+                    break;
+                }
+            }
+            else if(n==1) {
+                switch(a) {
+                case "가위":
+                    System.out.println("컴퓨터가 이겼습니다.");
+                    break;
+                case "바위":
+                    System.out.println("비겼습니다.");
+                    break;
+                case "보":
+                    System.out.println("사용자가 이겼습니다.");
+                    break;
+                default:
+                    break;
+                }
+            }
+            else {
+                switch(a) {
+                case "가위":
+                    System.out.println("사용자가 이겼습니다.");
+                    break;
+                case "바위":
+                    System.out.println("컴퓨터가 이겼습니다.");
+                    break;
+                case "보":
+                    System.out.println("비겼습니다.");
+                    break;
+                default:
+                    break;
+                }
+            }
+            System.out.print("가위 바위 보!>>");
+            a=sc.next();
+            
+        }
+        
+        sc.close();
+        
+    }
+}
